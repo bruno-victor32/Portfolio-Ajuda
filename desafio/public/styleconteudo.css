@@ -1,0 +1,162 @@
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+:root {
+    --green-color: rgb(4, 211, 97);  
+    --purple-color: rgb(113, 89, 193);
+    --orange-color:rgb(253, 149, 31);
+}
+      *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        body {
+            background: rgba(113, 89, 193, 0.863);
+            font-family: 'Source Sans Pro', sans-serif;
+            color: white;/*Mudar a cor das palavras que se encontram no corpo do nosso documento HTML*/
+
+        }
+        header {
+            padding: 30px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.87);
+            background: rgba(113, 89, 193, 0.726);
+            text-align: center;
+
+
+        }
+        #wrapper{/*Para pegar um seletor id utilizo # na frente em seguida o nome do id*/
+            text-align: center;
+            padding: 32px;    
+
+            }
+            header div a {
+                color: black;
+                /*Coloração de textos*/
+                font-size: 28px;
+                /*Tamanho da Fonte*/
+                line-height: 28px;
+                /*Altura da linha do texto*/
+                margin: 30px;
+                text-decoration:underline overline dotted rgba(255, 255, 255, 0.753);
+                /*Tirar o undelirne do link Sobre Aulas*/
+            }
+            #starter:hover {
+                border: 2px solid var(--purple-color);
+                box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+                margin-top: -10px;
+            }
+            #launchbase:hover {
+                border: 2px solid var(--orange-color);
+                box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+                margin-top: -10px;
+            }
+            
+            #gostack:hover {
+                border: 2px solid var(--green-color);
+                box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+                margin-top: -10px;
+            }
+            .card .card_numbers {
+                border-radius: 50%;
+                font-size: 16px;
+                font-weight: bold;
+                padding: 12px;
+            }
+            
+            .card #card_number_01 {    
+                color: var(--purple-color);
+                border: 2px solid var(--purple-color);
+            }
+            .card .card__info {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                margin-top: 35px;
+            }
+            
+            .card .card__price {
+                background-color: rgba(0, 0, 0, 0.2);
+                padding: 5px;
+                border-radius: 20px;
+            }
+
+                        /*=== CARDS === */
+                        .cards{
+
+                            max-width: 800px;/*Limte maximo de largura*/
+                            margin: 0 auto;/*Alinhar ao meio*/
+                            display: grid;/*Estou transformando ele como uma tabela onde tem os eixos x e y*/
+                            grid-template-columns: 1fr 1fr 1fr;/*Aqui vai ser o número de colunas que eu quero,que no caso quero 3 colunas,ele já vai colocar coladinho atrás do outro quando chegar no final ele joga para linha de baixo*/
+                            gap: 150px;/*O gap ele dá um espaço entre os elementos do grid*/
+                        }
+            
+                        .card__content,
+                        .card__info{
+                            padding: 18px;
+                        }
+            
+                        
+                   
+                        .card__info{
+                            display: grid;/*O grid trabalha em ambos os eixos, a partir que eu criei um eixo,posso dizer quantas colunas eu quero*/
+                            grid-template-columns: 1fr 1fr;/*Estou dizendo que ele vai deixar as minhas colunas com 2 colunas.Esse fr significa que eu quero que ele sejá flexível no tamanho e as 2 tenha os mesmos tamanhos*/
+                        }
+                        .card__price{
+                            background-color: #2734664b;
+                            filter: brightness(90%);/*Diminuir o Brilho*/
+                            padding: 5px 20px;/*Espaçamento 5 px em cima e embaixo e 20px nas laterais*/
+                            border-radius:20px ;/*Para arredondar os cantos*/
+                            text-align: center;/*Centralizar o texto*/
+                            border:2px solid rgba(62, 62, 202, 0.924);/*Borda ao redor do local que indica si e pago ou não*/
+                        }
+            
+            .modal-overlay {
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.7);
+                position: fixed;
+                top: 0;
+                opacity: 0;
+                visibility: hidden;
+            }
+            
+            .modal-overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .modal-overlay .modal {
+                background-color: white;
+                width: 70%;
+                height: 70%;
+                margin: 15vh auto;
+                position: relative;
+            }
+            
+            .modal.maximize{
+                width: 100%;
+                height: 100%;
+                margin: 1vh auto;
+            }
+            
+            .modal .close-modal {
+                right: 8px;
+                color: black;
+                position: absolute;    
+                top: 8px;
+                cursor: pointer;
+            }
+            
+            .modal #max-modal {
+                right: 40px;
+                color: black;
+                position: absolute;    
+                top: 8px;
+                cursor: pointer;
+            }
+            
+            iframe{
+                width: 100%;
+                height: 90%; 
+                position: absolute;
+                top: 8%;
+            }
